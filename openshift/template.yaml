@@ -112,7 +112,8 @@ objects:
             timeoutSeconds: 30
             failureThreshold: 3
             successThreshold: 1
-            port: ${{API_BACKBONE_SERVICE_PORT}}
+            tcpSocket:
+              port: ${{API_BACKBONE_SERVICE_PORT}}
           readinessProbe:
             tcpSocket:
               port: ${{API_BACKBONE_SERVICE_PORT}}
